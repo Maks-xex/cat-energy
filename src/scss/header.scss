@@ -1,0 +1,121 @@
+@use 'variables';
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.main-header__logo {
+  flex-direction: row;
+  margin: 0 auto 0 0;
+  padding: 12px 20px 0;
+  .text-logo {
+    margin-left: 50px;
+    position: relative;
+    top: -7px;
+  }
+}
+.main-nav__wrapper {
+  margin: 0 auto;
+}
+.main-nav__list {
+  list-style-type: none;
+  font-family: variables.$font-stack;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding:0;
+  margin: 0;
+  a {
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
+@media (max-width: variables.$mobile-width) {
+  .main-nav__wrapper {
+    border-top:1px solid gray;
+  }
+  .main-nav__item {
+    border-bottom: 1px solid #818181;
+    & a {
+      display: block;
+      padding: 10px;
+    }
+  }
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+  .main-nav--open .main-nav__wrapper{
+    display: block;
+  }
+  .main-nav__toggle {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    z-index: 2;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    &:active {
+      &::before, &:after{
+        opacity: 0.3;
+      }
+    }
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 15px;
+      left: 8px;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: #000000;
+      box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    }
+  }
+}
+@media (min-width: variables.$tablet-width) {
+  header {
+    max-width: 1220px;
+  }
+  .main-header {
+    flex-direction: row;
+  }
+  .main-header__logo img{
+    width: 173px;
+  }
+  .text-logo {
+    display: none;
+  }
+  .main-nav {
+    padding-top: 29.7px;
+    button {
+      display: none;
+    }
+  }
+  .main-nav__list {
+    display: flex;
+    font-size: 20px;
+    font-weight: normal;
+    a {
+      padding: 30px 20px 20px 20px;
+    }
+  }
+  .main-nav--active span {
+    border-bottom: 2px solid variables.$primary-color;
+    padding-bottom: 6px;
+  }
+}
+@media (min-width: variables.$desktop-width) {
+  .main-nav__wrapper a {
+    color: white;
+  }
+  .main-nav--active span {
+    border-color: white;
+  }
+}

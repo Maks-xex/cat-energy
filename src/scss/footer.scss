@@ -1,0 +1,151 @@
+@use "variables";
+footer {
+  padding-bottom: 20px;
+}
+.social__icon, .footer__logo, .about-me {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.map {
+  text-align: center;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+.map__pin {
+  width: 55px;
+  position: absolute;
+  margin: 199px -18px;
+}
+.fixed-img {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  & img {
+    max-width: none;
+  }
+}
+.footer__logo {
+  svg {
+    width: 128px;
+  }
+  display: block;
+  margin: 39px auto 31px;
+  width: fit-content;
+}
+.social__icon {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 20px;
+  & a {
+    padding: 20px;
+  }
+  & svg {
+    color: #666666;
+  }
+}
+.about-me a {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(68, 68, 68);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+.about-me img {
+  border-radius: 99em;
+  margin-left: 20px;
+}
+@media (max-width: variables.$mobile-width) {
+  .contact {
+    padding: 31px 19px;
+    max-width: 446px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: variables.$tablet-width) {
+  .map__pin {
+    width: 113px;
+    margin: 151px -46px;
+  }
+  footer {
+    padding: 0;
+  }
+  .footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: variables.$secondary-color;
+    padding: 44px 30px 32px;
+    align-items: center;
+  }
+  .footer__logo {
+    margin: 0;
+  }
+  .social__icon {
+    border: none;
+    padding: 0;
+    margin: 0;
+    align-items: flex-end;
+    a {
+      padding: 28px;
+    }
+  }
+  .vkontakte svg {
+      width: 36px;
+      height: 16px;
+  }
+  .instagram svg {
+      width: 23px;
+      height: 23px;
+    }
+  .facebook svg {
+      width: 14px;
+      height: 28px;
+  }
+  .about-me {
+    padding: 28px 0;
+  }
+}
+@media (min-width: variables.$desktop-width) {
+  .contact {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    width: 570px;
+    top: 2301px;
+    margin-left: 110px;
+    b {
+      margin-right: 90px;
+    }
+    p {
+      width: 181px;
+    }
+  }
+  .map-pin__fix {
+    position: absolute;
+    width: 113px;
+    margin: 150px 952px;
+  }
+  .map__pin {
+    margin: 0;
+  }
+  .fixed-img {
+    overflow: hidden;
+    justify-content: normal;
+  }
+  .footer__wrapper {
+    padding: 44px 90px 32px;
+  }
+}
