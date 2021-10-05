@@ -40,4 +40,3 @@
     "start": "npm run build && gulp serve"
   }
 }
-
