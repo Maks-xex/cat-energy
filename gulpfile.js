@@ -102,7 +102,7 @@ gulp.task("webp", function() {
 	.pipe(dest("src/img/webp"));
 });
 gulp.task("sprite", function() {
-	return src("src/img/src/*icon*.svg")
+	return src("src/img/src/**/*icon*.svg")
 		.pipe(svgstore({
 			inlineSvg:true
 		}))
@@ -122,6 +122,7 @@ gulp.task ("copy", function() {
 		'src/js/**/*.js',
 		'src/img/dest/**/*',
 		'src/**/*.html',
+		'src/favicon*',
 		], {
 			base: 'src'
 		}) // Параметр "base" сохраняет структуру проекта при копировании

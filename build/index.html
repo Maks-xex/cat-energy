@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="cat-energy.png">
+    <link rel="alternate icon" type="image/png" href="favicon.png?v=1.1">
     <title>Cat Energy</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
         </picture>
         <img class="text-logo" width="101" src="img/dest/text-logo.svg">
     </a>
-        <nav class="main-nav main-nav--closed">
+        <nav class="main-nav main-nav__item--bg-green main-nav--closed">
             <button class="main-nav__toggle" type="button"><span class="v-hidden"></span></button>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list">
@@ -36,7 +36,7 @@
                         <a href="catalog.html"><span>Каталог продукция</span></a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="selection.html"><span>подбор программ</span></a>
+                        <a href="form.html"><span>подбор программ</span></a>
                     </li>
                 </ul>
             </div>
@@ -54,7 +54,7 @@
         <div class="other-wrapper">
             <h2>Функциональное питание для котов</h2>
             <p>Занялся собой? Займись котом!</p>
-            <a href="selection.html" class="green-button button"><span>Подобрать программу</span></a>
+            <a href="form.html" class="green-button button"><span>Подобрать программу</span></a>
         </div>
     </section>
     <section class="article-content">
@@ -65,7 +65,7 @@
             <h3>Похудение</h3>
             <p class="item__paragraph">Ваш кот весит больше собаки и почти утратил способность лазить по
                 деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="catalog-link" href="#">Каталог Slim
+            <a class="link-button" href="#">Каталог Slim
                 <svg width="24" height="11">
                     <use xlink:href="./img/dest/sprite.svg#arrow-icon"></use>
                 </svg>
@@ -78,7 +78,7 @@
             <h3>Набор массы</h3>
             <p class="item__paragraph">Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="catalog-link" href="#">
+            <a class="link-button" href="#">
                 Каталог pro
                 <svg width="24" height="11">
                     <use xlink:href="./img/dest/sprite.svg#arrow-icon"></use>
@@ -142,9 +142,9 @@
                 <source media="(min-width: 1200px)" srcset="img/dest/after-desktop.png">
                 <img src="img/dest/after-mobile.png" alt="cat after">
             </picture>
-            <div class="toggle toggle_bar ">
+            <div class="toggle toggle_bar">
                 <span>Было</span>
-                <input type="range" min="0" max="2" class="toggle" id="slider" name="img-change">
+                <input type="range" min="0" max="2" value="0" class="toggle" id="slider" name="img-change">
                 <label for="slider"></label>
                 <span>Стало</span>
             </div>
@@ -184,5 +184,7 @@
         </div>
     </div>
 </footer>
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

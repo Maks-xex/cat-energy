@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate icon" type="image/png" href="favicon.png?v=1.1">
+    <title>Cat Energy</title>
+</head>
+<body>
+<header class="main-header">
+    <h1 class="v-hidden">cat energy</h1>
+    <a class="main-header__logo logo" href="index.html">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="img/dest/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/dest/logo-tablet.svg ">
+            <img src="img/dest/logo-mobile.svg" width="34" height="38" alt="logo cat-energy">
+        </picture>
+        <img class="text-logo" alt="CAT ENERGY" width="101" src="img/dest/text-logo.svg">
+    </a>
+    <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button"><span class="v-hidden"></span></button>
+        <div class="main-nav__wrapper main-nav__item--bg-white">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="index.html"><span>Главная</span></a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="catalog.html"><span>Каталог продукция</span></a>
+                </li>
+                <li class="main-nav__item main-nav--active">
+                    <a href="form.html"><span>подбор программ</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="main-form">
+    <section class="selection-programme">
+        <h2>Подбор программы</h2>
+        <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="selection-programme__form" id="programme-form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="main-information">
+                <div class="main-information__wrapper">
+                    <p class="input-box">
+                        <label>Имя:*<input  name="name" type="text" placeholder="Барсик"></label>
+                    </p>
+                    <p class="input-box">
+                        <label>Вес (кг):*<input  name="weight" type="text" placeholder="7"></label>
+                    </p>
+                    <p class="input-box">
+                        <label>Возраст (лет):<input type="text" name="age" placeholder="7"></label>
+                    </p>
+                </div>
+                <ul class="main-information__list">
+                    <li class="radio">
+                        <label><input type="radio" name="programme" value="slimming">
+                            <span></span>Похудение</label>
+                    </li>
+                    <li class="radio">
+                        <label><input type="radio" name="programme" value="weight_gain">
+                            <span></span>Набор массы</label>
+                    </li>
+                    <li class="radio">
+                        <label><input type="radio" name="programme" value="IDK">
+                            <span></span>Не знаю (Нужен ваш совет)</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="contact-detail">
+                <legend>
+                    <h3 class="heading">Контактные данные (владельца кота)</h3>
+                </legend>
+                <div class="contact-detail__wrapper">
+                    <p class="input-box">
+                        <label>Email:*
+                            <input  type="email" name="email" placeholder="kuklachev@gmail.com">
+                            <span class="fixed-svg">
+                                <svg width="17" height="13">
+                                    <use xlink:href="./img/dest/sprite.svg#mail-icon"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </p>
+                    <p class="input-box">
+                        <label>Телефон:*
+                            <input  type=tel name="tel" pattern="[0-9]{11}" placeholder="8 (960) 900-60-90">
+                            <span class="fixed-svg">
+                                <svg width="20" height="20">
+                                    <use xlink:href="./img/dest/sprite.svg#phone-icon"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </p>
+                </div>
+            </fieldset>
+            <fieldset class="comment">
+                <legend>
+                    <h3 class="heading">Комментарий</h3>
+                </legend>
+                <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+            <fieldset class="additional">
+                <legend>
+                    <h3 class="heading">Дополнительно</h3>
+                </legend>
+                <ul class="additional__list">
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="additional" value="sweetener">
+                            <span></span>Сахарозаменитель</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="additional" value="Drinking_water">
+                            <span></span>Питьевая вода</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="additional" value="milk">
+                            <span></span>Молоко</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="additional" value="vitamins">
+                            <span></span>Витамины</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <div class="button-and-legend__wrapper">
+                <button class="green-button form-button" type="submit" form="programme-form" value="send_request">
+                    <span>Отправить заявку</span>
+                </button>
+                <p class="legend">* — Обязательные поля</p>
+            </div>
+        </form>
+    </section>
+</main>
+<footer>
+    <div class="contact contact-catalog">
+        <b>приглашаем к сотрудничеству дилеров!</b>
+        <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
+    <div class="map">
+        <div class="map-pin__fix">
+            <a href="https://goo.gl/maps/eucXjpUBBeTWtPQt9">
+                <img class="map__pin" alt="Map pin" src="img/dest/map-pin.png">
+            </a>
+        </div>
+        <div class="fixed-img">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="img/dest/map-desktop.jpg">
+                <img src="img/dest/map.jpg" alt="map">
+            </picture>
+        </div>
+    </div>
+    <div class="footer__wrapper">
+        <a href="index.html" class="footer__logo logo">
+            <include src="src/img/dest/text-logo.svg"></include>
+        </a>
+        <ul class="social__icon">
+            <li><a class="vkontakte" href="#vk"><svg width="22" height="12"><use xlink:href="img/dest/sprite.svg#vk-icon"></use></svg></a></li>
+            <li><a class="instagram" href="#vk"><svg width="16" height="16"><use xlink:href="img/dest/sprite.svg#insta-icon"></use></svg></a></li>
+            <li><a class="facebook" href="#vk"><svg width="10" height="19"><use xlink:href="img/dest/sprite.svg#fb-icon"></use></svg></a></li>
+        </ul>
+        <div class="about-me">
+            <a href="https://github.com/Maks-xex">Maks-xex
+                <img width="28px" src="https://avatars.githubusercontent.com/u/61715859?v=4" alt="git-user-image"> </a>
+        </div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

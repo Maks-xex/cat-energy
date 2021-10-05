@@ -1,0 +1,16 @@
+@use "variables";
+
+@media not screen and (min-width: variables.$desktop-width) {
+  .contact-catalog {
+    background-color: variables.$secondary-color;
+    max-width: none;
+    margin: 0;
+    justify-content: space-around;
+    b {
+      width: 250px;
+    }
+    p {
+      width: 300px;
+    }
+  }
+}

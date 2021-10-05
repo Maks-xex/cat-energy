@@ -74,6 +74,20 @@ footer {
   }
 }
 @media (min-width: variables.$tablet-width) {
+  //region section contact
+  .contact {
+    padding: 66px 72px 50px;
+    justify-content: center;
+    b {
+      padding: 0;
+      width: 103px;
+      margin-right: 340px;
+    }
+    p {
+      width: 272px;
+    }
+  }
+  //endregion
   .map__pin {
     width: 113px;
     margin: 151px -46px;
@@ -124,7 +138,7 @@ footer {
     z-index: 2;
     background: white;
     width: 570px;
-    top: 2301px;
+    margin-top: 100px;
     margin-left: 110px;
     b {
       margin-right: 90px;
