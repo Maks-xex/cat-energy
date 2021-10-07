@@ -1,3 +1,5 @@
+"use strict";
+
 const range = document.querySelector("#slider"),
     imageCatbefore = document.querySelector(".cat-before"),
     imageCatafter = document.querySelector(".cat-after");
