@@ -1,3 +1,5 @@
+"use strict";
+
 const selectionForm = document.querySelector(".selection-programme__form");
 const personalTel = selectionForm.querySelector("[name=tel]"),
     personalEmail = selectionForm.querySelector("[name=email]"),
