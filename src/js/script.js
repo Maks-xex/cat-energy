@@ -1,3 +1,5 @@
+"use strict";
+
 const mainMenu = document.querySelector(".main-nav");
 const toggleMenu = mainMenu.querySelector(".main-nav__toggle");
 const catDemo = document.querySelector(".cat-demo");
